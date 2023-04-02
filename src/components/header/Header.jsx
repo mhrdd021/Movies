@@ -1,54 +1,22 @@
 import React from 'react'
 
-import { Link, useLocation } from 'react-router-dom';
-
-//Style
-import './header.scss'
-
-//Logo
-import Logo from '../../assets/tmovie.png'
-import { useRef } from 'react';
-
-const headerNav = [
-  {
-    display: 'Home' ,
-    path: '/'
-  },
-  {
-    display: 'Movies',
-    path: '/movie'
-  },
-  {
-    display: 'TV Series',
-    path: '/tv'
-  }
-];
+//Images
+import Logo from '../../assets/logo.png'
 
 const Header = () => {
-
-const { pathname } = useLocation();
-const headerRef = useRef(null)
-
-const active = headerNav.findIndex(e => e.path === pathname)
-
   return (
-    <div ref={headerRef} className="header">
-        <div className='header__wrap container'>
-          <div className='logo'>
-            <img src={Logo} alt=""/>
-            <Link to="/">tMovies</Link>
-          </div>
-          <ul className='header__nav'>
-            {
-              headerNav.map((e, i) => (
-                <li key={i} className={`${i === active ? 'active' : ''}`}>
-                  <Link to={e.path}>
-                    {e.display}
-                  </Link>
-                </li>
-              ))
-            }
-          </ul>
+    <div className='w-full transparent h-20 flex items-center justify-between px-8 absolute top-0 right-0 left-0 z-20 text-slate-100'>
+        <div className='flex items-center justify-center'>
+            <img src={Logo} className='w-16 h-auto' alt=''/>
+            <span className='font-bold text-2xl'>Movie Site</span>
+        </div>
+
+        <div>
+            <ul className='flex items-center justify-center gap-4 text-lg font-semibold' style={{direction:"rtl"}}>
+                <li>Home Page</li>
+                <li>Movies</li>
+                <li>Tv Series</li>
+            </ul>
         </div>
     </div>
   )

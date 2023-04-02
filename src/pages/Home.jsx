@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Home = () => {
+//component
+import Hero from '../components/hero/Hero'
+
+const Home = ({ Api }) => {
+  
   return (
-    <div>
-        Home
+    <div className='w-full bg-zinc-400 h-[200vh] absolute top-0 right-0 left-0 z-10'>
+        <Hero Api={Api}/>
     </div>
   )
 }

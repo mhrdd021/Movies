@@ -1,26 +1,18 @@
-import 'swiper/swiper.min.css'
-import './assets/boxicons-2.0.7/css/boxicons.min.css'
-import './App.scss';
+import './App.css';
 
-import { BrowserRouter, Route } from 'react-router-dom'
+//Data
+import { Api } from './api/Api'
 
-//Components
+//Component
 import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
-
-import Routes from './config/Routes'
+import Home from './pages/Home';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route render={props => {
-        <>
-          <Header {...props}/>
-          <Routes/>
-          <Footer/>
-        </>
-      }}/>
-    </BrowserRouter>
+    <div className="">
+      <Header />
+      <Home Api={Api}/>
+    </div>
   );
 }
 
