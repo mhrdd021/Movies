@@ -6,8 +6,14 @@ import axios from "axios";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// import Swiper core and required modules
+import { Navigation, Autoplay , A11y } from 'swiper';
+
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 //Animation
 import { motion } from "framer-motion";
@@ -24,23 +30,28 @@ const Hero = ({ Api }) => {
   }, []);
 
   return (
-    <div className="w-full h-screen">
+    <div className="flex items-center justify-center w-10/12 py-8">
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        loop={true}
-        className=" backdrop-brightness-50 "
+      modules={[Navigation, Autoplay , A11y]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      loop={true}
+      autoplay={400}
+      onReachEnd={() => {
+        console.log('reached')
+      }}
       >
         {slides.map((item, i) => (
           <SwiperSlide key={i}>
             <div
-              className="w-full h-screen flex items-center justify-center bg-no-repeat bg-center bg-cover "
+              className="w-full h-[600px] flex items-center justify-center bg-no-repeat bg-center bg-cover "
               style={{ backgroundImage: `url(${item.images[1]})` }}
             >
-              <div className=" backdrop-brightness-[0.60] h-screen w-full flex items-center justify-center">
-                <div className="flex items-center justify-center w-10/12 h-3/4 z-[200]">
-                  <div className="w-8/12">
-                    <div className="p-12 ">
+              <div className="backdrop-brightness-[0.60] h-screen w-full flex items-center justify-center">
+                <div className="flex items-center justify-center w-full md:w-10/12 h-3/4 z-[200] flex-col-reverse md:flex-row ">
+                  <div className="md:w-8/12 w-10/12">
+                    <div className="p-full ">
                       <motion.h1
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
@@ -55,7 +66,7 @@ const Hero = ({ Api }) => {
 
                       <motion.p
                         animate={{}}
-                        className="text-slate-300 font-normal text-md w-8/12 py-4"
+                        className="text-slate-300 font-normal text-md w-full md:w-8/12 py-4"
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
@@ -67,7 +78,7 @@ const Hero = ({ Api }) => {
 
                       <div className="flex items-center justify-start gap-8">
                         <button
-                          className="bg-red-600 border-2 text-slate-100 border-red-600 px-4 py-2 rounded-full text-md font-bold hover:scale-105 duration-300"
+                          className="bg-red-600 border-2 text-slate-100 border-red-600 py-1 px-2 md:px-4 md:py-2 rounded-full text-sm md:text-md font-bold hover:scale-105 duration-300"
                           style={{
                             boxShadow: "0px 0px 10px 10px RGBA(255,0,0,0.25)",
                           }}
@@ -75,9 +86,10 @@ const Hero = ({ Api }) => {
                           Watch Now
                         </button>
                         <button
-                          className="text-slate-100 border-2 bg-white/10 border-white px-4 py-2 rounded-full text-md font-bold hover:scale-105 duration-300"
+                          className="text-slate-100 border-2 bg-white/10 border-white py-1 px-2 md:px-4 md:py-2 rounded-full text-sm md:text-md font-bold hover:scale-105 duration-300"
                           style={{
-                            boxShadow: "0px 0px 10px 10px RGBA(255,255,255,0.15)",
+                            boxShadow:
+                              "0px 0px 10px 10px RGBA(255,255,255,0.15)",
                           }}
                         >
                           Watch Trailer

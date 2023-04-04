@@ -5,7 +5,7 @@ import Logo from "../../assets/logo.png";
 
 const Header = () => {
   return (
-    <div className="w-full transparent h-20 flex items-center justify-between px-8 absolute top-0 right-0 left-0 z-20 text-slate-100">
+    <div className="w-2/12  flex-col bg-gray-800 h-screen fixed hidden lg:flex items-center justify-around px-8 z-20 text-slate-100">
       <div className="flex items-center justify-center">
         <img src={Logo} className="w-16 h-auto" alt="" />
         <span className="font-bold text-2xl">Movie Site</span>
