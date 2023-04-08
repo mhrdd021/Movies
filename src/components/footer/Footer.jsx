@@ -11,7 +11,7 @@ import { FiMail } from "react-icons/fi";
 const Footer = () => {
   return (
     <div
-      className="flex-row sm:flex items-center p-8 w-full h-auto bg-cover bg-no-repeat text-slate-100"
+      className="flex-row sm:flex items-center p-8 w-full h-auto bg-cover bg-no-repeat text-slate-100 relative bottom-0"
       style={{ backgroundImage: `url(${FooterLogo})` }}
     >
 

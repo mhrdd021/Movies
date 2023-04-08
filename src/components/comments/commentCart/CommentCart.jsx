@@ -8,9 +8,9 @@ import { IoArrowUndoOutline } from 'react-icons/io5';
 
 const CommentCart = (data) => {
   return (
-    <div className='item-center justify-center rounded-xl md:flex py-8 my-2 bg-slate-600'>
+    <div className='item-center justify-center rounded-xl md:flex py-8 my-2 bg-zinc-900 border-1'>
 
-        <div className='flex item-center justify-center pb-4 md:pb-0'>
+        <div className='flex item-center md:justify-center justify-between pb-4 md:pb-0'>
             <div className='flex items-center justify-between px-4 gap-2'>
                 <div className='flex-col items-center justify-center text-red-500 pt-2 px-3 text-sm md:text-lg rounded-lg w-12' style={{border:"1px solid gray"}}>
                     <BiDislike className='mx-auto'/>

@@ -40,7 +40,7 @@ const CommentBox = () => {
       },
       {
         id:5,
-        name:"کامیار",
+        name:"David Nicolson",
         comment:"Anyone who wants to see a movie and the movie opens should first come and start from this, then go and see any movie he wants. It is the best since it was made until now.",
         hour:9,
         like:21,
