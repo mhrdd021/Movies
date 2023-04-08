@@ -3,6 +3,9 @@ import React from "react";
 //Images
 import FooterLogo from "../../assets/footer.jpg";
 
+//Link
+import { Link } from "react-router-dom";
+
 //Icons
 import { SlLocationPin } from "react-icons/sl";
 import { BsTelephone } from "react-icons/bs";
@@ -32,9 +35,13 @@ const Footer = () => {
           <div className="w-full md:w-1/2">
             <ul className="flex items-center justify-center flex-col gap-3">
               <li className="text-xl font-bold ">Links</li>
-              <li>Home Page</li>
+              <Link to={'/'}>
+                <li>Home Page</li>
+              </Link>
               <li>Movies</li>
-              <li>Category</li>
+              <Link to={'/categories'}>
+                <li>Category</li>
+              </Link>
               <li>Sign Up</li>
               <li>About Us</li>
             </ul>

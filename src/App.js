@@ -11,6 +11,7 @@ import CategoriesList from './pages/categories/CategoriesList/CategoriesListItem
 
 //
 import { Routes, Route } from "react-router-dom";
+import Movies from './pages/movies/Movies';
 
 
 function App() {
@@ -28,6 +29,7 @@ useEffect(() => {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/movie/:id' element={<SingleMovie/>} />
+          <Route path='/movies' element={<Movies/>} />
           <Route path='/categories' element={<Categories />}/>
           <Route path='/category/:id' element={<CategoriesList />}/>
         </Routes>

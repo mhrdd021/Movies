@@ -11,7 +11,8 @@ import { Link } from "react-router-dom";
 const CategoriesMovieCart = ({ data }) => {
   return (
     <div
-      className="flex flex-col md:flex-row items-center justify-center w-10/12 md:w-8/12 rounded-xl  my-8 md:pb-2 pb-4 movie_card px-4"
+      animate={{ opacity: 1 }}
+      className="duration-400 flex flex-col md:flex-row items-center justify-center w-10/12 md:w-8/12 rounded-xl  my-8 md:pb-2 pb-4 movie_card px-4"
       style={{ background: "linear-gradient(45deg, #000000, #2f2f2f)" }}
     >
       <div className="flex items-center justify-center w-10/12 md:w-4/12 image_container py-4 md:px-4">
@@ -26,7 +27,9 @@ const CategoriesMovieCart = ({ data }) => {
       <div className="w-full md:w-8/12 px-4 md:py-8 py-2">
         <div className="flex justify-between imdb_name_container pr-4 md:pr-1">
           <div>
-            <h1 className="md:text-2xl sm:text-lg text-md font-bold text-slate-100">{data.title}</h1>
+            <h1 className="md:text-2xl sm:text-lg text-md font-bold text-slate-100">
+              {data.title}
+            </h1>
             <hr
               className="my-4 md:w-12/12 red w-8/12"
               style={{ borderColor: "#ff3f34" }}
@@ -76,7 +79,10 @@ const CategoriesMovieCart = ({ data }) => {
         </p>
 
         <Link to={`/movie/${data.id}`}>
-          <button className="md:float-right bg-red-600 border-2 my-1 text-slate-100 border-red-600 py-0.5 px-1 md:px-4 md:py-2 rounded-full text-sm md:text-md font-bold hover:scale-105 duration-300" value={data.id}>
+          <button
+            className="md:float-right bg-red-600 border-2 my-1 text-slate-100 border-red-600 py-0.5 px-1 md:px-4 md:py-2 rounded-full text-sm md:text-md font-bold hover:scale-105 duration-300"
+            value={data.id}
+          >
             <span className="text">Watch Now</span>
           </button>
         </Link>

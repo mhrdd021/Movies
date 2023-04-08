@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 //Link
 import { Link } from "react-router-dom";
 
 const CategoriesList = ({ CategoriesData }) => {
+  //push page to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "categories";
+  }, []);
   return (
     <Link to={`/category/${CategoriesData.CategoryId}`}>
       <div

@@ -24,7 +24,7 @@ const Header = () => {
               <h1 className="block">Home Page</h1>
             </Link>
             
-            <Link to={'/'}>
+            <Link to={'/movies'}>
               <h1 className="block">Movies</h1>
             </Link>
               <ul className="flex-col text-slate-300 font-normal text-sm pl-4 gap-2 my-1.2">

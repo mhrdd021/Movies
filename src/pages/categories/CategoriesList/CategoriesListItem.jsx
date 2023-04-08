@@ -5,24 +5,22 @@ import axios from "axios";
 import CategoriesMovieCart from "./categoriesMovieCart/CategoriesMovieCart";
 
 //Components
-import Loader from '../../../loader/Loader'
+import Loader from "../../../loader/Loader";
 
 const CategoriesListItem = () => {
   //push page to top
   useEffect(() => {
-  window.scrollTo(0, 0);
-  document.title = "categories";
+    window.scrollTo(0, 0);
+    document.title = "categories";
   }, []);
-
 
   const [CategoryMovie, setCategoryMovie] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function FetchApi() {
-      
       const MovieId = window.location.pathname.split("/").pop();
-      
+
       // the Loading page will show.
       setLoading(true);
 
