@@ -34,7 +34,7 @@ const Movies = () => {
         `https://moviesapi.ir/api/v1/movies?page=${pageNumber}`
       );
 
-      setAllMovies((a) => [...allMovies, res.data.data]);
+      setAllMovies( a => [...allMovies, res.data.data]);
 
       // Closed the loading page
       setLoading(false);
@@ -48,13 +48,16 @@ const Movies = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="flex item-center justify-center">
+        <div className="flex item-center justify-center py-6">
           <div className="flex item-center justify-center flex-col w-10/12 min-h-screen">
-            <ul className="grid grid-cols-6 gap-3">
+            <ul className="grid md:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-3">
               {allMovies.map((arr, i) =>
                 arr.map((arrItem, i) => (
-                  <li className="">
-                    <AllMoviesCart data={arrItem} key={i} />
+                  <li key={i}>
+                    <AllMoviesCart
+                      data={arrItem}
+                      key={i}
+                    />
                   </li>
                 ))
               )}
@@ -62,7 +65,7 @@ const Movies = () => {
 
             <button
               onClick={LoadMore}
-              className="bg-blue-300 py-2 px-4 rounded-lg m-5"
+              className="mx-auto w-fit text-slate-100 shadow-md shadow-red-600 ease-in-out cursor-pointer hover:scale-105 active:scale-95 duration-300 bg-red-600 py-2 px-4 rounded-full m-5"
             >
               load more
             </button>
