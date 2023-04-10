@@ -6,9 +6,12 @@ import BreakingBad from "../../assets/breaking-bad.png";
 //Animation
 import { motion } from "framer-motion";
 
+//Link
+import { Link } from "react-router-dom";
+
 const Commercial = () => {
   const transition = { duration: 3, type: "spring" };
-  const transition2 = { duration:3, type: 'ease' }
+  const transition2 = { duration: 3, type: "ease" };
 
   return (
     <div
@@ -26,10 +29,11 @@ const Commercial = () => {
 
       <div className="flex item-center justify-center md:w-8/12 w-full">
         <motion.div
-        initial={{ left: "3rem" }}
-        whileInView={{ left: "0rem" }}
-        transition={transition2}
-        className="flex item-center justify-center flex-col py-4 px-8 gap-2 relative">
+          initial={{ left: "3rem" }}
+          whileInView={{ left: "0rem" }}
+          transition={transition2}
+          className="flex item-center justify-center flex-col py-4 px-8 gap-2 relative"
+        >
           <h1 className="md:text-3xl text-xl font-bold text-slate-100">
             Joining <span className="text-yellow-500">Us</span>
           </h1>
@@ -43,9 +47,11 @@ const Commercial = () => {
             rhoncus aenean vel elit scelerisque
           </p>
           <div className="flex items-center justify-start">
-            <button className="bg-yellow-500 rounded-full py-1 px-3 text-slate-100 text-sm font-bold shadow-lg shadow-yellow-400 hover:scale-105 active:scale-95 duration-300 ease-in-out">
-              Join us
-            </button>
+            <Link to={"/SignUp"}>
+              <button className="bg-yellow-500 rounded-full py-1 px-3 text-slate-100 text-sm font-bold shadow-lg shadow-yellow-400 hover:scale-105 active:scale-95 duration-300 ease-in-out">
+                Join us
+              </button>
+            </Link>
           </div>
         </motion.div>
       </div>

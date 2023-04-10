@@ -1,0 +1,89 @@
+.formContainer {
+    padding: 1rem 2rem;
+    width: 30%;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 4rem auto;
+    box-shadow: 0 5px 20px rgba(120, 120, 120, .3);
+    display: flex;
+}
+
+.header {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.formBox {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox label {
+    color: #888;
+}
+
+.formBox:not(:last-child) input {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+}
+
+.formBox:not(:last-child) input:focus {
+    border: 1px solid #0f4ed6;
+}
+
+.formBox span {
+    font-size: 12px;
+    padding:2px;
+    color: #e43427;
+}
+
+.checkeboxContainer {
+    display: flex;
+    align-items: center;
+}
+
+.checkeboxContainer input {
+    margin-left: 8px;
+}
+
+.unValidate {
+    border: 1px solid #e43427;
+}
+.validate {
+    border: 1px solid #ccc;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 1rem;
+}
+
+.formButtons button {
+    padding: 10px 20px;
+    background-color: #4BB543;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.formButtons a {
+    text-decoration: none;
+    color: #4BB543;
+    font-size: 1.1rem;
+}
+@media screen and (max-width:768px) {
+    .formContainer{
+        width: 90%;
+    }
+}

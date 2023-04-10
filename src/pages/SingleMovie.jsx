@@ -19,10 +19,10 @@ import CommentBox from "../components/comments/CommentBox";
 import Loader from "../loader/Loader";
 
 const SingleMovie = ({ Api }) => {
-//push page to top
-useEffect(() => {
-  window.scrollTo(0, 0);
-  document.title = "movie";
+  //push page to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "movie";
   }, []);
 
   const [singleMovie, setSingleMovie] = useState([]);
@@ -35,7 +35,9 @@ useEffect(() => {
       // the Loading page will show.
       setLoading(true);
 
-      const res = await axios.get(`https://moviesapi.ir/api/v1/movies/${MovieId}`);
+      const res = await axios.get(
+        `https://moviesapi.ir/api/v1/movies/${MovieId}`
+      );
       setSingleMovie(res.data);
 
       // Closed the loading page

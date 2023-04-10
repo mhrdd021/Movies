@@ -19,7 +19,7 @@ const MovieCart = ({ endpoint }) => {
     <Link to={`/movie/${endpoint.id}`}>
       <div
         className="w-full flex items-center justify-center flex-col"
-        onMouseOver={CartHover} 
+        onMouseOver={CartHover}
         onMouseOut={CartHoverOut}
       >
         <div className="w-full flex items-center justify-center flex-col">
