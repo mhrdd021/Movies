@@ -36,7 +36,9 @@ const Footer = () => {
             <Link to={"/"}>
               <li>Home Page</li>
             </Link>
-            <li>Movies</li>
+            <Link to={"/movies"}>
+              <li>Movies</li>
+            </Link>
             <Link to={"/categories"}>
               <li>Category</li>
             </Link>
@@ -55,7 +57,9 @@ const Footer = () => {
             <Link to={"/"}>
               <li>Home Page</li>
             </Link>
-            <li>Movies</li>
+            <Link to={"/movies"}>
+              <li>Movies</li>
+            </Link>
             <Link to={"/categories"}>
               <li>Category</li>
             </Link>

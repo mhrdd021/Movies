@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AboutUs.css";
 
 //Icons
@@ -14,6 +14,12 @@ import { BiCurrentLocation } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
+  //push page to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "Homepage";
+  }, []);
+
   const transition = { duration: 3, type: "spring" };
 
   return (
@@ -21,7 +27,9 @@ const AboutUs = () => {
       <div className="flex item-center justify-center flex-col md:w-10/12 ">
         <div className="map flex items-center justify-center w-full h-auto bg-center bg-cover bg-no-repeat">
           <div className="flex item-center justify-center flex-col gap-8 rounded-xl p-6">
-            <h1 className="text-center text-slate-100 text-3xl font-bold">About Us</h1>
+            <h1 className="text-center text-slate-100 text-3xl font-bold">
+              About Us
+            </h1>
             <p className="text-center text-md font-medium text-slate-300 md:w-10/12 mx-auto">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas
@@ -35,18 +43,20 @@ const AboutUs = () => {
               vitae suscipit tellus mauris a diam maecenas sed enim
             </p>
             <div className="grid md:grid-cols-3 grid-cols-1">
-                <div className="gap-2 flex item-center justify-center text-lg font-semibold">
-                  <SiGmail className=" mt-1 text-red-600"/>
-                  <span className="text-slate-100">mhrddmhrdd0@gmail.com</span>
-                </div>
-                <div className="gap-2 flex item-center justify-center text-lg font-semibold">
+              <div className="gap-2 flex item-center justify-center text-lg font-semibold">
+                <SiGmail className=" mt-1 text-red-600" />
+                <span className="text-slate-100">mhrddmhrdd0@gmail.com</span>
+              </div>
+              <div className="gap-2 flex item-center justify-center text-lg font-semibold">
                 <BsTelephoneFill className="mt-1 text-red-600" />
-                  <span className="text-slate-100">09123456789</span>
-                </div>
-                <div className="gap-2 flex item-center justify-center text-lg font-semibold">
+                <span className="text-slate-100">09123456789</span>
+              </div>
+              <div className="gap-2 flex item-center justify-center text-lg font-semibold">
                 <BiCurrentLocation className="mt-1 text-red-600" />
-                  <span className="text-slate-100">Tehran-TehranPars-Shahed blv</span>
-                </div>
+                <span className="text-slate-100">
+                  Tehran-TehranPars-Shahed blv
+                </span>
+              </div>
             </div>
           </div>
         </div>
